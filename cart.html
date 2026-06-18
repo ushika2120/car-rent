@@ -1,0 +1,96 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Cart - Car Rental</title>
+  </head>
+  <body>
+    <header class="head_part row">
+      <div class="header_left row">
+        <div class="logo_box row">
+          <img src="./icon/car1.svg" alt="car icon" class="logo" />
+          <p class="logo_text row">Car Rental</p>
+        </div>
+        <nav class="nav_box row">
+          <a href="index.html" class="nav_text">Home</a>
+          <a href="cars.html" class="nav_text bold">Vehicles</a>
+          <a href="" class="nav_text">Details</a>
+          <a href="" class="nav_text">About Us</a>
+          <a href="" class="nav_text">Contact Us</a>
+        </nav>
+      </div>
+      <div class="header_right row">
+        <div class="phone_box row">
+          <img src="./icon/phone.svg" alt="phone" class="phone" />
+          <p class="phone_num">+995 599 376694</p>
+        </div>
+        <div class="flag_box row">
+          <a href="./kartuli.html">
+            <img src="./icon/ge.svg" alt="geo" class="flag" />
+          </a>
+          <a href="./index.html">
+            <img src="./icon/uk.svg" alt="eng" class="flag" />
+          </a>
+          <a href="./russian.html">
+            <img src="./photo/russian flag.png" alt="rus" class="flag" />
+          </a>
+        </div>
+        <div class="header_actions row">
+          <a href="cart.html" class="cart_link">
+            <img src="./icon/cart.svg" alt="Cart" class="cart_icon" />
+            <span>Cart</span>
+          </a>
+          <a href="login.html" class="auth_button">Login</a>
+          <a href="register.html" class="auth_button register">Register</a>
+        </div>
+      </div>
+    </header>
+    <main class="main_conteiner row">
+      <div class="action_section">
+        <section class="cart_section">
+          <h2 class="section_title">Shopping cart</h2>
+          <div id="cartList" class="cart_list">
+            <p class="empty_cart">Your cart is empty.</p>
+          </div>
+          <div class="cart_summary">
+            <p>Total: <span id="cartTotal">0</span>$</p>
+            <button id="clearCartBtn" class="clear_cart_btn" type="button">
+              Clear cart
+            </button>
+          </div>
+          <p class="form_message" id="cartMessage"></p>
+        </section>
+      </div>
+    </main>
+    <footer>
+      <div class="footer_content">
+        <div class="footer_section">
+          <h3>Car Rental</h3>
+          <p>
+            Experience the road like never before. Choose your ideal vehicle and
+            enjoy a smooth ride.
+          </p>
+        </div>
+        <div class="footer_section">
+          <h3>Quick Links</h3>
+          <a href="index.html">Home</a>
+          <a href="cars.html">Vehicles</a>
+          <a href="">About Us</a>
+          <a href="">Contact Us</a>
+        </div>
+        <div class="footer_section">
+          <h3>Contact Info</h3>
+          <p>Phone: +995 599 376694</p>
+          <p>Email: info@carrental.ge</p>
+          <p>Address: Tbilisi, Georgia</p>
+        </div>
+      </div>
+      <div class="footer_bottom">
+        <p>&copy; 2024 Car Rental. All rights reserved.</p>
+      </div>
+    </footer>
+    <script src="js/app.js"></script>
+  </body>
+</html>

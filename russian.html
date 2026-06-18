@@ -8,32 +8,24 @@
   </head>
   <body>
     <header class="head_part row">
-      <div class="logo_box row">
-        <img src="./icon/car1.svg" alt="car icon" class="logo" />
-        <p class="logo_text row">Прокат автомобилей</p>
+      <div class="header_left row">
+        <div class="logo_box row">
+          <img src="./icon/car1.svg" alt="car icon" class="logo" />
+          <p class="logo_text row">Прокат автомобилей</p>
+        </div>
+        <nav class="nav_box row">
+          <a href="./russian.html" class="nav_text">Дом</a>
+          <a href="./russian-cars.html" class="nav_text bold"
+            >Транспортные средства</a
+          >
+          <a href="" class="nav_text">Подробности</a>
+          <a href="" class="nav_text">нас</a>
+          <a href="" class="nav_text">Свяжитесь с нами</a>
+        </nav>
       </div>
-      <input
-        type="checkbox"
-        id="nav_toggle"
-        class="nav_toggle"
-        aria-label="Toggle navigation"
-      />
-      <label for="nav_toggle" class="nav_burger" aria-hidden="true">
-        <span></span>
-        <span></span>
-        <span></span>
-      </label>
-      <nav class="nav_box row">
-        <a href="./russian.html" class="nav_text">Дом</a>
-        <a href="./russian-cars.html" class="nav_text bold">Транспортные средства</a>
-        <a href="" class="nav_text">Подробности</a>
-        <a href="" class="nav_text">нас</a>
-        <a href="" class="nav_text">Свяжитесь с нами</a>
-      </nav>
-      <div class="tel_box row">
+      <div class="header_right row">
         <div class="phone_box row">
           <img src="./icon/phone.svg" alt="phone" class="phone" />
-          <p class="phone_text">Нужна помощь?</p>
           <p class="phone_num">+995 599 376694</p>
         </div>
         <div class="flag_box row">
@@ -46,6 +38,14 @@
           <a href="./russian.html">
             <img src="./photo/russian flag.png" alt="rus" class="flag" />
           </a>
+        </div>
+        <div class="header_actions row">
+          <a href="cart.html" class="cart_link">
+            <img src="./icon/cart.svg" alt="Cart" class="cart_icon" />
+            <span>Cart</span>
+          </a>
+          <a href="login.html" class="auth_button">Login</a>
+          <a href="register.html" class="auth_button register">Register</a>
         </div>
       </div>
     </header>
@@ -171,15 +171,13 @@
             <img src="./icon/car(2) 1.svg" alt="car" class="icon" />
             <h2 class="icon_text">Комфорт</h2>
             <p class="icon_smalltext">
-              Расслабьтесь в дороге — путешествуйте с максимальным комфортом.
+              Расслабьтесь в дороге — путешествуйте с максимальным комфортом
             </p>
           </div>
           <div class="icon_box">
             <img src="./icon/wallet(1) 1.svg" alt="walet" class="icon" />
             <h2 class="icon_text">Экономия</h2>
-            <p class="icon_smalltext">
-              Плати меньше, получай больше
-            </p>
+            <p class="icon_smalltext">Плати меньше, получай больше</p>
           </div>
         </div>
       </div>
@@ -400,7 +398,90 @@
           </div>
         </div>
       </div>
+      <section class="action_section row">
+        <div class="registration_section">
+          <h2 class="section_title">Регистрация</h2>
+          <form id="registrationForm" class="register_form">
+            <label class="form_label" for="fullName">ФИО</label>
+            <input
+              class="form_input"
+              type="text"
+              id="fullName"
+              name="fullName"
+              required
+              placeholder="Иван Иванов"
+            />
+            <label class="form_label" for="email">E-mail</label>
+            <input
+              class="form_input"
+              type="email"
+              id="email"
+              name="email"
+              required
+              placeholder="email@example.com"
+            />
+            <label class="form_label" for="phone">Телефон</label>
+            <input
+              class="form_input"
+              type="tel"
+              id="phone"
+              name="phone"
+              required
+              placeholder="+995 5XX XX XX XX"
+            />
+            <label class="form_label" for="pickup">Место получения</label>
+            <input
+              class="form_input"
+              type="text"
+              id="pickup"
+              name="pickup"
+              placeholder="Аэропорт Тбилиси"
+            />
+            <button type="submit" class="submit_btn">Зарегистрироваться</button>
+            <p class="form_message" id="formMessage"></p>
+          </form>
+        </div>
+        <div class="cart_section">
+          <h2 class="section_title">Корзина</h2>
+          <div id="cartList" class="cart_list">
+            <p class="empty_cart">Пока нет выбранных автомобилей.</p>
+          </div>
+          <div class="cart_summary">
+            <p>Общая сумма: <span id="cartTotal">0</span>$</p>
+            <button id="clearCartBtn" class="clear_cart_btn" type="button">
+              Очистить корзину
+            </button>
+          </div>
+        </div>
+      </section>
     </main>
-    <footer></footer>
+    <footer>
+      <div class="footer_content">
+        <div class="footer_section">
+          <h3>Аренда автомобилей</h3>
+          <p>
+            Почувствуйте дорогу как никогда раньше. Выберите свой идеальный
+            автомобиль и наслаждайтесь гладкой ездой.
+          </p>
+        </div>
+        <div class="footer_section">
+          <h3>Быстрые ссылки</h3>
+          <a href="russian.html">Главная</a>
+          <a href="russian-cars.html">Автомобили</a>
+          <a href="">О нас</a>
+          <a href="">Свяжитесь с нами</a>
+        </div>
+        <div class="footer_section">
+          <h3>Контактная информация</h3>
+          <p>Телефон: +995 599 376694</p>
+          <p>Email: info@carrental.ge</p>
+          <p>Адрес: Тбилиси, Грузия</p>
+        </div>
+      </div>
+      <div class="footer_bottom">
+        <p>&copy; 2024 Аренда автомобилей. Все права защищены.</p>
+      </div>
+    </footer>
+    <script src="js/app.js"></script>
   </body>
 </html>
