@@ -631,20 +631,17 @@ function applyLanguage() {
 }
 
 function bindBookFormActions() {
-  const bookToggle = document.getElementById("book_toggle");
+  // Outside click closes form - simple version
   const bookBox = document.querySelector(".book_box");
-  const bookBurger = document.querySelector(".book_burger");
-
-  if (bookToggle && bookBox && bookBurger) {
-    // Close form when clicking outside
+  const bookToggle = document.getElementById("book_toggle");
+  
+  if (bookBox && bookToggle) {
     document.addEventListener("click", (event) => {
-      // Check if the click is outside both the form and the button
-      const isClickInsideForm = bookBox.contains(event.target);
-      const isClickOnButton = bookBurger.contains(event.target);
-      
-      // Close only if form is open and click is outside
-      if (bookToggle.checked && !isClickInsideForm && !isClickOnButton) {
-        bookToggle.checked = false;
+      if (!bookBox.contains(event.target) && event.target.id !== "book_toggle") {
+        const label = document.querySelector("label[for='book_toggle']");
+        if (label && !label.contains(event.target)) {
+          bookToggle.checked = false;
+        }
       }
     });
   }
@@ -658,7 +655,6 @@ function init() {
   bindRegistrationForm();
   bindLoginForm();
   bindRegisterForm();
-  bindBookFormActions();
   applyLanguage();
 }
 

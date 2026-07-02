@@ -348,8 +348,7 @@ button {
   top: 78.5px;
   right: 78px;
   z-index: 1;
-  opacity: 1;
-  transition: opacity 0.3s ease;
+  display: none;
 }
 .book_toggle {
   display: none;
@@ -368,6 +367,10 @@ button {
   font-family: sans_bold;
   font-size: 14px;
   color: #111;
+}
+
+.book_toggle:checked + .book_burger + .book_box {
+  display: flex;
 }
 .book_burger span {
   display: block;
@@ -1193,6 +1196,9 @@ footer .footer_bottom {
   .book_toggle:checked + .book_burger span:nth-child(3) {
     transform: translateY(-6px) rotate(-45deg);
   }
+  .book_toggle:checked + .book_burger + .book_box {
+    display: flex;
+  }
   .select_box,
   .car_book {
     width: 100%;
@@ -1498,10 +1504,15 @@ footer .footer_bottom {
   }
 
   .book_box {
+    display: none;
     width: calc(100% - 20px);
     max-width: 90vw;
     max-height: 80vh;
     padding: 20px 12px 24px 12px;
+  }
+
+  .book_toggle:checked + .book_burger + .book_box {
+    display: flex;
   }
 
   .select_box {
