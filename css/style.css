@@ -464,6 +464,17 @@ button {
   gap: 20px;
   margin-top: 40px;
 }
+
+.date-label {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  color: #555;
+  margin-bottom: 6px;
+  font-family: sans;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
 .car_book {
   width: 336px;
   height: 38px;
@@ -474,6 +485,70 @@ button {
   padding-left: 16px;
   padding-right: 11px;
   background-color: rgb(231, 232, 233);
+  border: 1px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.car_book:focus {
+  outline: none;
+  border-color: #0284c7;
+  box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.1);
+}
+
+input[type="date"].car_book {
+  font-size: 14px;
+  font-family: sans;
+  color: #111;
+  padding: 8px 12px;
+  cursor: pointer;
+  width: 100%;
+  height: 38px;
+  border: none;
+  border-radius: 12px;
+  background-color: rgb(231, 232, 233);
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  position: relative;
+}
+
+input[type="date"].car_book::placeholder {
+  color: #999;
+}
+
+input[type="date"].car_book::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+  border-radius: 4px;
+  margin-right: 6px;
+  opacity: 0.8;
+  filter: invert(0.4);
+  transition: all 0.2s ease;
+  width: 24px;
+  height: 24px;
+}
+
+input[type="date"].car_book::-webkit-calendar-picker-indicator:hover {
+  opacity: 1;
+  filter: invert(0.6);
+}
+
+input[type="date"].car_book:focus {
+  outline: none;
+  border: 1px solid #0284c7;
+  box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.1);
+  background-color: #f8fafb;
+}
+
+input[type="date"].car_book::-webkit-outer-spin-button,
+input[type="date"].car_book::-webkit-inner-spin-button {
+  display: none;
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="date"].car_book::-webkit-textfield-decoration-container {
+  display: flex;
+  align-items: center;
 }
 .book_btn_box {
   width: 100%;
@@ -1395,6 +1470,15 @@ footer .footer_bottom {
   .book_toggle:checked + .book_burger + .book_box {
     display: flex;
   }
+
+  input[type="date"].car_book {
+    height: 42px;
+    padding: 8px 12px;
+  }
+
+  .date-label {
+    font-size: 11px;
+  }
 }
 
 @media (max-width: 600px) {
@@ -1522,6 +1606,17 @@ footer .footer_bottom {
   .car_book {
     width: 100%;
     font-size: 13px;
+  }
+
+  input[type="date"].car_book {
+    font-size: 13px;
+    padding: 10px 12px;
+    height: 44px;
+    width: 100%;
+  }
+
+  .date-label {
+    font-size: 11px;
   }
 
   .book_title {
