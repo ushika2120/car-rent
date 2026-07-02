@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
-    <title>Document</title>
+    <title>Car Rental</title>
   </head>
   <body>
     <header class="head_part row">
@@ -25,8 +25,8 @@
           <span></span>
         </label>
         <nav class="nav_box row">
-          <a href="index.html" class="nav_text">Home</a>
-          <a href="cars.html" class="nav_text bold">Vehicles</a>
+          <a href="index.html" class="nav_text bold">Home</a>
+          <a href="cars.html" class="nav_text">Vehicles</a>
           <a href="" class="nav_text">Details</a>
           <a href="" class="nav_text">About Us</a>
           <a href="" class="nav_text">Contact Us</a>
@@ -38,23 +38,46 @@
           <p class="phone_num">+995 599 376694</p>
         </div>
         <div class="flag_box row">
-          <a href="./kartuli.html">
+          <button
+            type="button"
+            class="lang_button"
+            data-lang="ka"
+            aria-label="ქართული"
+          >
             <img src="./icon/ge.svg" alt="geo" class="flag" />
-          </a>
-          <a href="./index.html">
+          </button>
+          <button
+            type="button"
+            class="lang_button"
+            data-lang="en"
+            aria-label="English"
+          >
             <img src="./icon/uk.svg" alt="eng" class="flag" />
-          </a>
-          <a href="./russian.html">
+          </button>
+          <button
+            type="button"
+            class="lang_button"
+            data-lang="ru"
+            aria-label="Русский"
+          >
             <img src="./photo/russian flag.png" alt="rus" class="flag" />
-          </a>
+          </button>
         </div>
         <div class="header_actions row">
-          <a href="cart.html" class="cart_link">
+          <button type="button" class="cart_link" data-open-panel="cart">
             <img src="./icon/cart.svg" alt="Cart" class="cart_icon" />
             <span>Cart</span>
-          </a>
-          <a href="login.html" class="auth_button">Login</a>
-          <a href="register.html" class="auth_button register">Register</a>
+          </button>
+          <button type="button" class="auth_button" data-open-panel="login">
+            Login
+          </button>
+          <button
+            type="button"
+            class="auth_button register"
+            data-open-panel="register"
+          >
+            Register
+          </button>
         </div>
       </div>
     </header>
@@ -75,9 +98,9 @@
                 </p>
               </div>
               <div class="butt_box">
-                <button class="btn">
-                  <p class="btn_text">View all cars</p>
-                </button>
+                <a class="btn" href="cars.html">
+                  <span class="btn_text">View all cars</span>
+                </a>
               </div>
             </div>
             <input
@@ -189,6 +212,72 @@
           </div>
         </div>
       </div>
+      <div class="image-slider-section" aria-label="Project photos">
+        <div class="image-slider" data-slider>
+          <button
+            class="slider-btn slider-btn-prev"
+            type="button"
+            data-slider-prev
+            aria-label="Previous image"
+          >
+            &#8249;
+          </button>
+          <div class="slider-track">
+            <img
+              class="slider-image active"
+              src="./photo/1.jpg"
+              alt="Landscape survey area"
+            />
+            <img
+              class="slider-image"
+              src="./photo/2.jpg"
+              alt="Project planning maps"
+            />
+            <img
+              class="slider-image"
+              src="./photo/3.jpg"
+              alt="Construction measurement site"
+            />
+            <img
+              class="slider-image"
+              src="./photo/4.jpg"
+              alt="Topographic map"
+            />
+          </div>
+          <button
+            class="slider-btn slider-btn-next"
+            type="button"
+            data-slider-next
+            aria-label="Next image"
+          >
+            &#8250;
+          </button>
+          <div class="slider-dots" aria-label="Slider navigation">
+            <button
+              class="active"
+              type="button"
+              data-slider-dot="0"
+              aria-label="Show image 1"
+            ></button>
+            <button
+              type="button"
+              data-slider-dot="1"
+              aria-label="Show image 2"
+            ></button>
+            <button
+              type="button"
+              data-slider-dot="2"
+              aria-label="Show image 3"
+            ></button>
+            <button
+              type="button"
+              data-slider-dot="3"
+              aria-label="Show image 4"
+            ></button>
+          </div>
+        </div>
+      </div>
+    </div>
       <div class="choose_carbox">
         <div class="choose_title">
           <h2 class="choose_text">
@@ -409,68 +498,166 @@
           </div>
         </div>
       </div>
-      <section class="action_section row">
-        <div class="registration_section">
-          <h2 class="section_title">Registration</h2>
-          <form id="registrationForm" class="register_form">
-            <label class="form_label" for="fullName">Full name</label>
-            <input
-              class="form_input"
-              type="text"
-              id="fullName"
-              name="fullName"
-              required
-              placeholder="Ivan Ivanov"
-            />
-            <label class="form_label" for="email">E-mail</label>
-            <input
-              class="form_input"
-              type="email"
-              id="email"
-              name="email"
-              required
-              placeholder="email@example.com"
-            />
-            <label class="form_label" for="phone">Phone</label>
-            <input
-              class="form_input"
-              type="tel"
-              id="phone"
-              name="phone"
-              required
-              placeholder="+995 5XX XX XX XX"
-            />
-            <label class="form_label" for="pickup">Pickup location</label>
-            <input
-              class="form_input"
-              type="text"
-              id="pickup"
-              name="pickup"
-              placeholder="Tbilisi Airport"
-            />
-            <button type="submit" class="submit_btn">Register</button>
-            <p class="form_message" id="formMessage"></p>
-          </form>
-        </div>
-        <div class="cart_section">
-          <h2 class="section_title">Cart</h2>
-          <div id="cartList" class="cart_list">
-            <p class="empty_cart">No selected cars yet.</p>
-          </div>
-          <div class="cart_summary">
-            <p>Total: <span id="cartTotal">0</span>$</p>
-            <button id="clearCartBtn" class="clear_cart_btn" type="button">
-              Clear cart
-            </button>
-          </div>
-        </div>
-      </section>
     </main>
+    <div class="overlay" id="cartOverlay" data-panel="cart" aria-hidden="true">
+      <button
+        class="overlay_backdrop"
+        type="button"
+        data-close-panel
+        aria-label="Close"
+      ></button>
+      <aside class="cart_drawer" aria-label="Shopping cart">
+        <div class="panel_header">
+          <h2 class="section_title">Shopping cart</h2>
+          <button
+            class="panel_close"
+            type="button"
+            data-close-panel
+            aria-label="Close"
+          >
+            ×
+          </button>
+        </div>
+        <div id="cartList" class="cart_list">
+          <p class="empty_cart">No selected cars yet.</p>
+        </div>
+        <div class="cart_summary">
+          <p>Total: <span id="cartTotal">0</span>$</p>
+          <button id="clearCartBtn" class="clear_cart_btn" type="button">
+            Clear cart
+          </button>
+        </div>
+        <p class="form_message" id="cartMessage"></p>
+      </aside>
+    </div>
+    <div
+      class="overlay"
+      id="loginOverlay"
+      data-panel="login"
+      aria-hidden="true"
+    >
+      <button
+        class="overlay_backdrop"
+        type="button"
+        data-close-panel
+        aria-label="Close"
+      ></button>
+      <section class="modal_panel registration_section">
+        <div class="panel_header">
+          <h2 class="section_title">Login</h2>
+          <button
+            class="panel_close"
+            type="button"
+            data-close-panel
+            aria-label="Close"
+          >
+            ×
+          </button>
+        </div>
+        <form id="loginForm" class="register_form">
+          <label class="form_label" for="loginEmail">Email</label>
+          <input
+            class="form_input"
+            type="email"
+            id="loginEmail"
+            name="email"
+            required
+          />
+          <label class="form_label" for="loginPassword">Password</label>
+          <input
+            class="form_input"
+            type="password"
+            id="loginPassword"
+            name="password"
+            required
+          />
+          <button type="submit" class="submit_btn">Login</button>
+          <p class="form_message" id="loginMessage"></p>
+        </form>
+        <p class="auth_prompt">
+          Don't have an account?
+          <button type="button" class="auth_switch" data-open-panel="register">
+            Register here
+          </button>
+        </p>
+      </section>
+    </div>
+    <div
+      class="overlay"
+      id="registerOverlay"
+      data-panel="register"
+      aria-hidden="true"
+    >
+      <button
+        class="overlay_backdrop"
+        type="button"
+        data-close-panel
+        aria-label="Close"
+      ></button>
+      <section class="modal_panel registration_section">
+        <div class="panel_header">
+          <h2 class="section_title">Register</h2>
+          <button
+            class="panel_close"
+            type="button"
+            data-close-panel
+            aria-label="Close"
+          >
+            ×
+          </button>
+        </div>
+        <form id="registerForm" class="register_form">
+          <label class="form_label" for="registerFullName">Full name</label>
+          <input
+            class="form_input"
+            type="text"
+            id="registerFullName"
+            name="fullName"
+            required
+          />
+          <label class="form_label" for="registerEmail">Email</label>
+          <input
+            class="form_input"
+            type="email"
+            id="registerEmail"
+            name="email"
+            required
+          />
+          <label class="form_label" for="registerPhone">Phone</label>
+          <input
+            class="form_input"
+            type="tel"
+            id="registerPhone"
+            name="phone"
+            required
+          />
+          <label class="form_label" for="registerPassword">Password</label>
+          <input
+            class="form_input"
+            type="password"
+            id="registerPassword"
+            name="password"
+            required
+          />
+          <button type="submit" class="submit_btn">Register</button>
+          <p class="form_message" id="registerMessage"></p>
+        </form>
+        <p class="auth_prompt">
+          Already have an account?
+          <button type="button" class="auth_switch" data-open-panel="login">
+            Login here
+          </button>
+        </p>
+      </section>
+    </div>
     <footer>
       <div class="footer_content">
         <div class="footer_section">
           <h3>Car Rental</h3>
-          <p>Experience the road like never before. Choose your ideal vehicle and enjoy a smooth ride.</p>
+          <p>
+            Experience the road like never before. Choose your ideal vehicle and
+            enjoy a smooth ride.
+          </p>
         </div>
         <div class="footer_section">
           <h3>Quick Links</h3>
@@ -491,11 +678,5 @@
       </div>
     </footer>
     <script src="js/app.js"></script>
-  </body>
-</html>
-
-    
-    </script>
-    <footer></footer>
   </body>
 </html>
